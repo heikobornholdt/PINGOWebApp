@@ -81,8 +81,8 @@ end
   ENV['COMMIT_HASH'] = "unknown"
   
   #maxcluster URLs
-  ENV["REDISTOGO_URL"] = "redis://HOST:port"
-  ENV["MONGOHQ_URL"] = "mongodb://user:pw@HOST:PORT/DBNAME"
+  ENV["REDISTOGO_URL"] = "redis://localhost"
+  ENV["MONGOHQ_URL"] = "mongodb://eclickr:eclickr@localhost/eclickr"
   ENV["MEMCACHE_PASSWORD"] = ""
   ENV["MEMCACHE_SERVERS"] = ""
   ENV["MEMCACHE_USERNAME"] = ""
@@ -103,3 +103,5 @@ ENV["ANALYTICS"] = "false" # tracks some statistics about usage (not to be confu
 def pprint(arg)
   true
 end
+
+puts "======\n #{Rails.application.config.action_mailer.default_url_options}\n========"
